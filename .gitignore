@@ -10,9 +10,12 @@ __pycache__/
 
 # unattended agent
 logs/
+state/
 
 # gmail cleanup secrets/logs
 credentials.json
 token.json
 trash_log.jsonl
 imap_trash_log.jsonl
+
+.env

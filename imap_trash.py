@@ -49,6 +49,10 @@ def get_creds():
     load_dotenv(os.path.join(here, ".env"))
     user = os.environ.get("GMAIL_ADDRESS", "").strip()
     password = os.environ.get("GMAIL_APP_PASSWORD", "").strip().replace(" ", "")
+    if len(password) != 16:
+        alt = os.environ.get("Python-IMAP", "").strip().replace(" ", "")
+        if len(alt) == 16:
+            password = alt
     if not user or not password:
         print(
             "ERROR: Missing GMAIL_ADDRESS and/or GMAIL_APP_PASSWORD. "
@@ -128,16 +132,52 @@ def get_sample(mail, uid):
         return "(unavailable)"
 
 
-def move_to_trash(mail, uid):
+def find_trash(mail):
+    try:
+        typ, data = mail.list()
+        if typ != "OK" or not data:
+            return None
+        for row in data:
+            if isinstance(row, bytes):
+                s = row.decode("utf-8", errors="replace")
+            else:
+                s = str(row)
+            if "\\Trash" in s:
+                parts = s.split('"')
+                if len(parts) >= 3:
+                    return parts[-2]
+    except Exception:
+        return None
+    return None
+
+
+def move_to_trash(mail, uid, trash_cache={}):
     last_err = None
-    for dest in TRASH_CANDIDATES:
+    dests = []
+    found = trash_cache.get("dest")
+    if found is None:
+        found = find_trash(mail)
+        trash_cache["dest"] = found
+    if found:
+        dests.append(found)
+    for d in TRASH_CANDIDATES:
+        if d not in dests:
+            dests.append(d)
+    for dest in dests:
         try:
             typ, _ = mail.uid("copy", uid, dest)
             if typ == "OK":
                 return dest
             last_err = "copy -> %s: %s" % (dest, typ)
-        except (imaplib.IMAP4.error, OSError) as e:
+        except Exception as e:
             last_err = "copy -> %s: %s" % (dest, e)
+    try:
+        typ, _ = mail.uid("store", uid, "+X-GM-LABELS", "(\\Trash)")
+        if typ == "OK":
+            return "X-GM-LABELS-\\Trash"
+        last_err = "x-gm-labels: %s" % (typ,)
+    except Exception as e:
+        last_err = "x-gm-labels: %s" % (e,)
     print("  [skip] %s: no Trash mailbox worked (%s)" % (uid, last_err))
     return None
 
