@@ -1,0 +1,18 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# unattended agent
+logs/
+
+# gmail cleanup secrets/logs
+credentials.json
+token.json
+trash_log.jsonl
+imap_trash_log.jsonl
