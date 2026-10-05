@@ -1,4 +1,4 @@
-# Heartbeat (unattended task definition)
+# Heartbeat (unattended automation definition)
 # agent-task.bat attaches this file to every run. Keep it small and idempotent.
 
 1. `git status --short` 대신 작업 폴더 파일 목록만 확인 (git repo 아님).
