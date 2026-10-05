@@ -1,21 +1,15 @@
-# secrets
+# secrets - .env 값은 절대 커밋 금지 (.env.example만 예외)
 .env
 .env.*
 !.env.example
+credentials.json
+token.json
 
 # python
 .venv/
 __pycache__/
 *.pyc
 
-# unattended agent
+# unattended automation
 logs/
 state/
-
-# gmail cleanup secrets/logs
-credentials.json
-token.json
-trash_log.jsonl
-imap_trash_log.jsonl
-
-.env
