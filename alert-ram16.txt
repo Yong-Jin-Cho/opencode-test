@@ -1,83 +1,59 @@
-﻿RAM16 ALERT 2026-10-04 23:00:19
+﻿RAM16 ALERT 2026-10-05 12:12:30
 Target: DDR4 notebook 16GB x2 (Yeongtong/Seohyeon/Pungdeokcheon)
 
 - [Yeongtong]  | ì¼ì± DDR4 16GB ë¸í¸ë¶ ë¨ 90,000ì ìíµ1ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-ve2wtya3geox/
-- [Yeongtong]  | Bitis DDR4 16GB ë¨ 2ê° 190,000ì íìë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/bitis-ddr4-16gb-%EB%9E%A8-2%EA%B0%9C-f6xfhavj6n2n/
-- [Seohyeon]  | ì¼ì± DDR4 16GB 3200AA ë¸í¸ë¶ ë¨ 100,000ì ìíë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-3200aa-%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-qv9o4bks23jh/
-- [Yeongtong]  | ë§ì´í¬ë¡  ddr4 16gb 100,000ì ë¼íë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%A0-ddr4-16gb-cku6vx3m7m4z/
-- [Pungdeokcheon]  | ì¼ì±ì ì PC4-25600 DDR4 3200 16GB x 3EA 150,000ì ì£½ì ë Â·
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-pc4-25600-ddr4-3200-16gb-x-3ea-j2rdi3g9jt11/
-- [Seohyeon]  | ì»¤ì¸ì´ ë²¤ì  ì¤ DDR4 16GB*2 & ë©ì¸ë³´ë ì¸í¸ 245,000ì ì¼í3ë Â·
-  https://www.daangn.com/kr/buy-sell/%EC%BB%A4%EC%84%B8%EC%96%B4-%EB%B2%A4%EC%A0%A0%EC%8A%A4-ddr4-16gb-2-%EB%A9%94%EC%9D%B8%EB%B3%B4%EB%93%9C-%EC%84%B8%ED%8A%B8-np7huefu2j59/
-- [Yeongtong]  | ì¼ì± DDR4  16GB ë¨ 2ê° 200,000ì ê´ì¬ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-%EB%9E%A8-2%EA%B0%9C-yfryoxzshi3p/
+- [Yeongtong]  | ë¯¸ì¬ì© G.SKILL í¸ë¼ì´ëí¸Z RGB DDR4 16GB 3200MHz 160,000ì íì¥ë Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EB%AF%B8%EC%82%AC%EC%9A%A9-g-skill-%ED%8A%B8%EB%9D%BC%EC%9D%B4%EB%8D%98%ED%8A%B8z-rgb-ddr4-16gb-3200mhz-q5p7hm19w9ow/
 - [Pungdeokcheon]  | ì¼ì± 16GB DDR4 PC4-2666V ë¨ 140,000ì ìí2ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-16gb-ddr4-pc4-2666v-%EB%9E%A8-of12nop873sv/
 - [Yeongtong]  | ì¼ì± DDR4 RAM 16GB 110,000ì ì·¨ìë Â· ë°ë¡êµ¬ë§¤
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-ram-16gb-q3v2icg8v9yn/
+- [Yeongtong]  | "ë¸í¸ë¶ì©" DDR4 16GB PC4-2666V ë¨ 2ê° 180,000ì ë©´ëª©ì 4ë Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9A%A9-ddr4-16gb-pc4-2666v-%EB%9E%A8-2%EA%B0%9C-ipay81q6qaw9/
 - [Pungdeokcheon]  | ì¼ì± DDR4 16GB PC4-2666V 110,000ì ë³´ì ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2666v-mcmnb2kepw56/
 - [Yeongtong]  | ì¼ì±ì ì DDR4 16GB 2666 íë§¤ 114,000ì ê´êµ1ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-ddr4-16gb-2666-%ED%8C%90%EB%A7%A4-tw99tgbyuyef/
-- [Seohyeon]  | ì¼ì± ìê¸ì¹ ë¨ ddr4 16gb+8gb 135,000ì ì¼íë Â·
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-%EC%8B%9C%EA%B8%88%EC%B9%98-%EB%9E%A8-ddr4-16gb-8gb-diudpg3yawyc/
-- [Seohyeon]  | ì¼ì± DDR4 16GB PC4-2666 ë¨ 2ê° 240,000ì ì ì1ë Â·
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2666-%EB%9E%A8-2%EA%B0%9C-2qfstz554zty/
-- [Yeongtong]  | ì¼ì± DDR4 16GB PC4-2133P ë¸í¸ë¶ ë¨ 2ê° 200,000ì ëê³ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2133p-%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-2%EA%B0%9C-27chk4t21ozf/
-- [Seohyeon]  | ì¼ì± DDR4 16GB ë¨ 90,000ì ì¼í3ë Â·
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-%EB%9E%A8-23ysw6askwzy/
-- [Yeongtong]  | ì¼ì± DDR4 8Ã8 16GB ë¨ 8g 2ê° 75,000ì ì ë¹ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-8-8-16gb-%EB%9E%A8-8g-2%EA%B0%9C-r1f5n214fo59/
-- [Pungdeokcheon]  | SKíì´ëì¤ DDR4 16GB PC4-2400ë¸í¸ë¶ ë¨ 90,000ì ê¸ê³¡ë Â·
-  https://www.daangn.com/kr/buy-sell/sk%ED%95%98%EC%9D%B4%EB%8B%89%EC%8A%A4-ddr4-16gb-pc4-2400%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-7tonq4i8pziw/
-- [Seohyeon]  | íê·¸ë£¹ Elite+ DDR4 16GB 2400 ë¨ 88,000ì ë°±íë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%ED%8C%80%EA%B7%B8%EB%A3%B9-elite-ddr4-16gb-2400-%EB%9E%A8-b1ybsct6dbwg/
-- [Yeongtong]  | ì¼ì± DDR4 16GB 3200 ë¸í¸ë¶ ë¨ 2ê° 200,000ì ì ë§¤ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-3200-%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-2%EA%B0%9C-gc5iicv1pu4g/
-- [Seohyeon]  | ì¼ì± DDR4 16GB PC4-2400T ë¨ 130,000ì ì íë Â·
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2400t-%EB%9E%A8-nyis4occoacb/
-- [Pungdeokcheon]  | íë¬´ì¦ DDR4 16GB ë¸í¸ë¶ ë¨ PC4-25600S 80,000ì ìí3ë Â·
-  https://www.daangn.com/kr/buy-sell/%ED%83%80%EB%AC%B4%EC%A6%88-ddr4-16gb-%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-pc4-25600s-bwajvksv1hcj/
+- [Yeongtong]  | ì¼ì± DDR4 16GB 2666v ë¨ ë©ëª¨ë¦¬ 120,000ì ëì°ë Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-2666v-%EB%9E%A8-%EB%A9%94%EB%AA%A8%EB%A6%AC-owpxmhqaed8d/
+- [Yeongtong]  | DDR4  16gb 3200mhz ìëë¤ 110,000ì ì ì1ë Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/ddr4-16gb-3200mhz-%EC%9E%85%EB%8B%88%EB%8B%A4-7h6m6ih35txs/
+- [Yeongtong]  | ë¸í¸ë¶ DDR4 16GB 3200 79,000ì ë¬¸ì°ì Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EB%85%B8%ED%8A%B8%EB%B6%81-ddr4-16gb-3200-5o1prz2tmujk/
+- [Yeongtong]  | DDR4 16GB ë¸í¸ë¶ì© ë©ëª¨ë¦¬(RAM) 75,000ì ì ê´ì Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/ddr4-16gb-%EB%85%B8%ED%8A%B8%EB%B6%81%EC%9A%A9-%EB%A9%94%EB%AA%A8%EB%A6%AC-ram-yiidyyayp1od/
+- [Yeongtong]  | ì¼ì± DDR4 16GB PC4-2666V ë¨ 110,000ì í¬ë¨1ë Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2666v-%EB%9E%A8-vw9synspsuv2/
+- [Yeongtong]  | ì¼ì± DDR4 16GB PC4-2133P, 2666v ë¨ 2ê° 200,000ì ë²ì²ë Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2133p-2666v-%EB%9E%A8-2%EA%B0%9C-cmy7wdcodkx7/
 - [Pungdeokcheon]  | ì¼ì± DDR4 16GBÃ2ê° 300,000ì ëì²ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-2%EA%B0%9C-dnoa9zdatje8/
-- [Seohyeon]  | ì¼ì± DDR4 16GB 2666v ë¨ 2ê° 16Ã2=32GB 220,000ì ê¹ëì¥ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-2666v-%EB%9E%A8-2%EA%B0%9C-16-2-32gb-3uhqd2ihvwn2/
+- [Pungdeokcheon]  | ì¼ì±ì ì PC4-25600 DDR4 3200 16GB x 3EA 150,000ì ì£½ì ë Â·
+  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-pc4-25600-ddr4-3200-16gb-x-3ea-j2rdi3g9jt11/
 - [Pungdeokcheon]  | DDR4 16GB 2666MHz 2020ìì´ë§¥ì© 100,000ì ë§ë¶ë Â·
   https://www.daangn.com/kr/buy-sell/ddr4-16gb-2666mhz-2020%EC%95%84%EC%9D%B4%EB%A7%A5%EC%9A%A9-tg5j4xsy8gos/
-- [Pungdeokcheon]  | ENVINDA DDR4 3200 16GB ë¨ 100,000ì íë Â·
+- [Yeongtong]  | ENVINDA DDR4 3200 16GB ë¨ 100,000ì íë Â·
   https://www.daangn.com/kr/buy-sell/envinda-ddr4-3200-16gb-%EB%9E%A8-9fdu3ski7u4m/
-- [Seohyeon]  | ì¼ì±ì ì PC4-25600 DDR4 3200 16GB x 4EA 150,000ì ìí¥ë Â·
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90-pc4-25600-ddr4-3200-16gb-x-4ea-n8id2aajmob1/
+- [Pungdeokcheon]  | ì¼ì± DDR4 16GB 3200MHz ë¸í¸ë¶ ë¨ íë§¤í´ì 120,000ì ìí2ë Â·
+  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-3200mhz-%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-%ED%8C%90%EB%A7%A4%ED%95%B4%EC%9A%94-5j34a7btry7a/
 - [Yeongtong]  | ì¼ì± DDR4 8GB, 16GB ë¨ 160,000ì ë³¸ì¤ë Â· ë°ë¡êµ¬ë§¤
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-8gb-16gb-%EB%9E%A8-wnye8ksjepbj/
 - [Yeongtong]  | ì¼ì± DDR4 16GB 2ê° 200,000ì ì¸ê³ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-2%EA%B0%9C-4sovs8e8cwvj/
-- [Yeongtong]  | ì¼ì± DDR4 16GB 3200AA   2ê° 16Ã2=32GB 300,000ì ê¹ëì¥ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-3200aa-2%EA%B0%9C-16-2-32gb-xt3hsfutu3e6/
-- [Yeongtong]  | ì¼ì± DDR4 16GB / 8GB 50,000ì ì©ëë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-8gb-qguzuvfgce3y/
-- [Yeongtong]  | ì¼ì± DDR4 32GB (16GBx2) ë¨ ì¼ê´ 200,000ì ì¤ì°½ì Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-32gb-16gbx2-%EB%9E%A8-%EC%9D%BC%EA%B4%84-fk2jyr6zjxbs/
 - [Seohyeon]  | ì¼ì± ë¸í¸ë¶ë¨ DDR4 16GB 2400T 90,000ì ìíë Â· ë°ë¡êµ¬ë§¤
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-%EB%85%B8%ED%8A%B8%EB%B6%81%EB%9E%A8-ddr4-16gb-2400t-xia7yn14ao61/
 - [Seohyeon]  | ì¼ì± DDR4 16GB ë¸í¸ë¶ ë¨ 100,000ì ì¼íë Â· ë°ë¡êµ¬ë§¤
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-%EB%85%B8%ED%8A%B8%EB%B6%81-%EB%9E%A8-xzhsmmubyttp/
+- [Yeongtong]  | ì¼ì± ë¨ DDR4 3200 16ê¸°ê° PCì© ë¨ ìíì¢ì 150,000ì íë¦¬5ë Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-%EB%9E%A8-ddr4-3200-16%EA%B8%B0%EA%B0%80-pc%EC%9A%A9-%EB%9E%A8-%EC%83%81%ED%83%9C%EC%A2%8B%EC%9D%8C-ai9b9iyt41g1/
 - [Yeongtong]  | ì¼ì± DDR4 16GB PC4-2666V ë¨ 110,000ì ë¥ë Â· ë°ë¡êµ¬ë§¤
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2666v-%EB%9E%A8-asskgmfvgb5w/
 - [Yeongtong]  | ì¼ì± DDR4 16GB PC4-2666V ë¨ 2ê° íë§¤ í©ëë¤. 110,000ì ì ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-2666v-%EB%9E%A8-2%EA%B0%9C-%ED%8C%90%EB%A7%A4-%ED%95%A9%EB%8B%88%EB%8B%A4-gy751wtfew6n/
 - [Yeongtong]  | ì¼ì± ddr4 2666 16gb íëë¤ 110,000ì ì¸ê³ë Â·
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-2666-16gb-%ED%8C%9D%EB%8B%88%EB%8B%A4-g7gqhntiwor6/
-- [Seohyeon]  | ì¼ì± DDR4 16GB PC4-3200 ë¨ ëê° ê°ë¹ 150,000ì ìí¥ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-pc4-3200-%EB%9E%A8-%EB%91%90%EA%B0%9C-%EA%B0%9C%EB%8B%B9-kuj13vudgqyp/
+- [Yeongtong]  | ì»¤ì¸ì´ ë²¤ì  ì¤ LPX DDR4 16gbíëë¤. 125,000ì ì²­ëì Â· ë°ë¡êµ¬ë§¤
+  https://www.daangn.com/kr/buy-sell/%EC%BB%A4%EC%84%B8%EC%96%B4-%EB%B2%A4%EC%A0%A0%EC%8A%A4-lpx-ddr4-16gb%ED%8C%9D%EB%8B%88%EB%8B%A4-v3wcm46d1gdy/
 - [Yeongtong]  | ì¼ì± DDR4 16GB 2666V 2ê° 110,000ì ë¶ë°ì Â· ë°ë¡êµ¬ë§¤
   https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-2666v-2%EA%B0%9C-4ivu5nu4pn5x/
-- [Yeongtong]  | TREAVE DDR4 16GB 3200 Ã 2ê° íì¤í¬íì© 200,000ì ìì£¼ë Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/treave-ddr4-16gb-3200-2%EA%B0%9C-%ED%85%8C%EC%8A%A4%ED%81%AC%ED%83%91%EC%9A%A9-cxugmn3jrtcp/
-- [Yeongtong]  | ì¼ì± DDR4 16GB 2666 íëë¤ 115,000ì ì¡ì²ë2ê° Â· ë°ë¡êµ¬ë§¤
-  https://www.daangn.com/kr/buy-sell/%EC%82%BC%EC%84%B1-ddr4-16gb-2666-%ED%8C%9D%EB%8B%88%EB%8B%A4-7sxk2udx9crs/
