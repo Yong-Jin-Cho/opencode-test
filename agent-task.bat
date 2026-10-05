@@ -14,7 +14,7 @@ for /f "tokens=1-3 delims=/ " %%a in ('date /t') do set D=%%a%%b%%c
 for /f "tokens=1-2 delims=: " %%a in ('time /t') do set T=%%a%%b
 set LOG=logs\agent-%D%-%T%.log
 set MSG=%~1
-if "%MSG%"=="" set MSG=tasks/heartbeat.md에 정의된 점검을 수행해줘
+if "%MSG%"=="" set MSG=tasks/heartbeat.md에 정의된 자동화를 수행해줘
 echo [%DATE% %TIME%] task start ^> %LOG%
 if "%OPENCODE_AUTO%"=="1" (
   echo [WARN] --auto enabled. 1>&2
