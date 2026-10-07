@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>탭으로 바뀌는 AI 에이전트 메뉴얼 — 중학생용</title>
+<style>
+:root{
+  --bg:#0f141a; --bg2:#171d26; --card:#1c232e; --line:#2e3745;
+  --text:#e9eef5; --muted:#9aa7b8; --accent:#5ac8a8; --accent2:#6aa8ff;
+  --amber:#e8b23e; --pink:#ef8aa5;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;line-height:1.75}
+header{position:sticky;top:0;z-index:10;background:#131820;border-bottom:1px solid var(--line);padding:18px 20px 0}
+header h1{margin:0 0 4px;font-size:1.28rem}
+header p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
+.progress-wrap{height:6px;background:#0a0d11;border-radius:99px;overflow:hidden;margin-bottom:12px}
+#progressBar{height:100%;width:20%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .3s ease}
+nav.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px}
+nav.tabs button{flex:1 0 auto;min-width:120px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--text);cursor:pointer;font-size:.86rem}
+nav.tabs button[aria-selected="true"]{background:var(--accent);color:#0c1210;font-weight:700;border-color:var(--accent)}
+nav.tabs button:focus-visible,.pager button:focus-visible,.quiz button:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}
+main{max-width:900px;margin:0 auto;padding:24px 20px 60px}
+.panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+.panel.active{display:block}
+.panel h2{margin-top:0;font-size:1.22rem}
+.panel h3{margin:22px 0 8px;font-size:1rem;color:var(--accent)}
+.box{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}
+.muted{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.agent-card{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px}
+.agent-card b{font-size:1rem}
+.agent-card .emoji{font-size:1.6rem}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;border-radius:99px;padding:2px 10px;margin:6px 4px 0 0;border:1px solid var(--line)}
+.t-build{background:#5ac8a822;color:var(--accent);border-color:var(--accent)}
+.t-plan{background:#6aa8ff22;color:var(--accent2);border-color:var(--accent2)}
+.t-search{background:#e8b23e22;color:var(--amber);border-color:var(--amber)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.86rem}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#141a23;color:var(--accent)}
+td.soso{color:var(--muted)}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.filter-row button{padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:var(--bg2);color:var(--text);cursor:pointer;font-size:.82rem}
+.filter-row button.on{background:var(--accent);color:#0c1210;font-weight:700}
+.quiz button{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);cursor:pointer}
+.quiz button.correct{border-color:var(--accent);background:#5ac8a822}
+.quiz button.wrong{border-color:var(--pink);background:#ef8aa522}
+.quiz .explain{display:none;font-size:.86rem;color:var(--muted);margin:4px 0 12px}
+.check-list{list-style:none;padding:0;margin:12px 0;display:grid;gap:10px}
+.check-list label{display:flex;gap:10px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer}
+.check-list input{width:18px;height:18px;margin-top:4px;accent-color:var(--accent)}
+#checkRate{font-weight:700;color:var(--accent)}
+.rate-bar{height:8px;background:#0a0d11;border-radius:99px;overflow:hidden;margin-top:8px}
+#rateFill{height:100%;width:0;background:var(--accent);transition:width .3s}
+.pager{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
+.pager button{padding:10px 18px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);cursor:pointer;font-size:.9rem}
+.pager button:disabled{opacity:.4;cursor:default}
+#pageInfo{color:var(--muted);font-size:.86rem}
+.print-btn{background:var(--accent)!important;color:#0c1210!important;font-weight:700;border-color:var(--accent)!important}
+footer{max-width:900px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:.82rem}
+kbd{background:#0a0d11;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 8px;font-family:Consolas,monospace;font-size:.85em}
+@media (max-width:800px){
+  .grid2,.grid3{grid-template-columns:1fr}
+  nav.tabs{flex-direction:column}
+  nav.tabs button{min-width:0;width:100%;text-align:left}
+  .panel{padding:18px}
+  .pager{flex-direction:column;align-items:stretch;text-align:center}
+}
+/* A4 인쇄: 5장 내외 분량 */
+@page{size:A4;margin:15mm}
+@media print{
+  header{position:static}
+  nav.tabs,.pager,.progress-wrap,.filter-row,.no-print{display:none!important}
+  body{background:#fff;color:#111}
+  main{max-width:none;padding:0}
+  .panel{display:block!important;background:#fff;color:#111;border:none;border-bottom:2px solid #ddd;border-radius:0;padding:14px 0;page-break-inside:avoid}
+  .panel h3{color:#0a6b4f}
+  .box,.agent-card,.check-list label{background:#f5f5f5!important;color:#111;border-color:#ccc}
+  .muted{color:#444}
+  th{background:#eee!important;color:#111}
+  footer{display:none}
+  h2{font-size:15pt} p,li,td{font-size:10.5pt}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>⌨️ 탭(Tab)으로 바뀌는 AI 에이전트 — 중학생 메뉴얼</h1>
+  <p>Tab 키 = 역할 모자 바꾸기. 5장만 읽으면 “언제 누굴 부를지” 압니다. 분량: A4 약 5장.</p>
+  <div class="progress-wrap" role="progressbar" aria-label="학습 진행률" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="progressWrap"><div id="progressBar"></div></div>
+  <nav class="tabs" aria-label="장 이동 메뉴" id="tabNav">
+    <button type="button" data-page="0" aria-selected="true">1장. 탭이 뭐야?</button>
+    <button type="button" data-page="1" aria-selected="false">2장. 에이전트 6명 소개</button>
+    <button type="button" data-page="2" aria-selected="false">3장. 장·단점 비교표</button>
+    <button type="button" data-page="3" aria-selected="false">4장. 골라쓰기 + 퀴즈</button>
+    <button type="button" data-page="4" aria-selected="false">5장. 해보기 + 인쇄</button>
+  </nav>
+</header>
+
+<main id="main">
+  <!-- 1장 -->
+  <section class="panel active" data-panel="0" aria-label="1장 탭이 뭐야">
+    <h2>1장. 탭(Tab) 키를 누르면 왜 사람이 바뀌나요?</h2>
+    <p><strong>탭 = AI의 “역할 모자”를 갈아씌우는 버튼</strong>입니다. 같은 AI라도 모자에 따라 말투·권한·행동이 달라집니다. 축구팀에서 공격수·골키퍼를 바꾸는 것과 같습니다.</p>
+    <div class="box">
+      <strong>🎩 비유: 모자 가게</strong>
+      <p class="muted" style="margin:6px 0 0">빨간 모자(공사반장)를 쓰면 직접 망치질을 하고, 파란 모자(설계사)를 쓰면 도면만 그리고 망치를 들지 않습니다. opencode에서 <kbd>Tab</kbd>을 누를 때마다 “공사반장 → 설계사 → 탐정”처럼 역할이 바뀝니다.</p>
+    </div>
+    <h3>탭 1번 = 뭐가 바뀌나요? 3가지</h3>
+    <div class="grid3">
+      <div class="box"><strong>① 할 수 있는 일</strong><p class="muted" style="margin:6px 0 0">어떤 모자는 파일 수정 가능, 어떤 모자는 읽기만 가능.</p></div>
+      <div class="box"><strong>② 말하는 방식</strong><p class="muted" style="margin:6px 0 0">계획만 짜주는 모자 vs 바로 코드 짜주는 모자.</p></div>
+      <div class="box"><strong>③ 위험도</strong><p class="muted" style="margin:6px 0 0">실수해도 안전한 모자(읽기 전용)부터 있습니다.</p></div>
+    </div>
+    <div class="box">
+      <strong>⌨️ 직접 확인하기 (10초)</strong>
+      <p style="margin:6px 0 0">opencode 실행 화면에서 <kbd>Tab</kbd>을 2~3번 눌러보세요. 입력창 옆 이름(build / plan / explore 등)이 바뀌면 성공! 지금은 바꾸기만 하고, 실행은 5장에서 합니다.</p>
+    </div>
+    <p class="muted">핵심 한 줄: <strong>탭은 “누가 일하느냐”를 고르는 선택기입니다.</strong> 2장에서 선수 6명을 소개합니다.</p>
+    <div class="pager"><button type="button" data-prev disabled>← 이전</button><span id="pageInfo0">1 / 5</span><button type="button" data-next data-goto="1">다음 →</button></div>
+  </section>
+
+  <!-- 2장 -->
+  <section class="panel" data-panel="1" aria-label="2장 에이전트 소개">
+    <h2>2장. 선수 6명 소개 — 이름·성격·한 줄 역할</h2>
+    <p>중학교 반 친구들에 비유했습니다. 이름 옆 영어(원래 이름)도 함께 외우면 탭 화면에서 바로 알아봅니다.</p>
+    <div class="grid2">
+      <div class="agent-card"><div class="emoji">🔨</div><b>공사반장 (build)</b><span class="tag t-build">직접 수정함</span><p class="muted">기본 선수. 시키면 파일 고치고, 명령 실행하고, 결과까지 보여줍니다. 가장 힘이 세지만 실수도 할 수 있어요.</p></div>
+      <div class="agent-card"><div class="emoji">📐</div><b>설계사 (plan)</b><span class="tag t-plan">계획만 짬</span><p class="muted">망치를 들지 않습니다. “무슨 순서로 고칠지” 설계도(할 일 목록)만 짜줍니다. 큰 공사 전에 꼭 불러요.</p></div>
+      <div class="agent-card"><div class="emoji">🔍</div><b>탐정 (explore)</b><span class="tag t-search">읽기만 함 · 안전</span><p class="muted">파일을 절대 안 고칩니다. “이 기능이 어디 있어?”를 찾아줍니다. 처음 온 동네 지도 그리기 담당.</p></div>
+      <div class="agent-card"><div class="emoji">📚</div><b>사서 (librarian)</b><span class="tag t-search">외부 지식 담당</span><p class="muted">우리 반이 아니라 도서관에서 답을 찾아옵니다. 처음 보는 도구·공식 문서·남의 예시가 필요할 때.</p></div>
+      <div class="agent-card"><div class="emoji">🧠</div><b>박사님 (oracle)</b><span class="tag t-plan">상담만 함 · 비쌈</span><p class="muted">읽기만 하는 최고 학력 상담가. 어려운 고장·설계 고민을 물어보면 방향을 잡아줍니다. 자주 부르면 느려요.</p></div>
+      <div class="agent-card"><div class="emoji">📝</div><b>기록반장 (general / writing)</b><span class="tag t-build">정리·문서 담당</span><p class="muted">설명서·정리·여러 잡일을 묶어 합니다. 오늘 메뉴얼 같은 글을 잘 씁니다.</p></div>
+    </div>
+    <div class="box"><strong>보너스 2명 (이름만 알아두기):</strong> <span class="muted">Metis(기획 상담 — “진짜 원하는 게 뭐야?” 묻기), Momus(비평가 — 계획에 구멍 찾기). 큰 숙제 전에 둘이 도와줍니다.</span></div>
+    <div class="pager"><button type="button" data-prev data-goto="0">← 이전</button><span>2 / 5</span><button type="button" data-next data-goto="2">다음 →</button></div>
+  </section>
+
+  <!-- 3장 -->
+  <section class="panel" data-panel="2" aria-label="3장 장단점 비교">
+    <h2>3장. 장·단점 한눈 비교표</h2>
+    <p>아래 버튼을 눌러 관심 있는 선수만 모아보세요. 인쇄하면 표 전체가 나옵니다.</p>
+    <div class="filter-row no-print" id="filterRow" role="group" aria-label="에이전트 필터">
+      <button type="button" data-filter="all" class="on">전체</button>
+      <button type="button" data-filter="work">🛠️ 직접 일함</button>
+      <button type="button" data-filter="safe">🛡️ 안전(읽기만)</button>
+      <button type="button" data-filter="think">💡 생각·상담</button>
+    </div>
+    <div style="overflow-x:auto">
+    <table id="compareTable">
+      <tr><th>선수</th><th>장점 👍</th><th>단점 👎</th><th>쓸 때</th></tr>
+      <tr data-cat="work"><td><b>🔨 공사반장</b><br><span class="muted">build</span></td><td>시키는 대로 바로 고침. 속도 빠름.</td><td class="soso">잘못 시키면 잘못 고침. 되돌리기 필요.</td><td>할 일이 명확할 때</td></tr>
+      <tr data-cat="think"><td><b>📐 설계사</b><br><span class="muted">plan</span></td><td>파일 안 망가뜨림. 순서·범위 정리 최고.</td><td class="soso">코드를 안 짜줌. “그래서 해줘”는 못함.</td><td>2단계 이상 큰 작업 전</td></tr>
+      <tr data-cat="safe"><td><b>🔍 탐정</b><br><span class="muted">explore</span></td><td>절대 안 망가뜨림. 여러 곳 동시 탐색.</td><td class="soso">수정·실행 못함. 찾기만 함.</td><td>“어디 있어?” 찾을 때</td></tr>
+      <tr data-cat="safe"><td><b>📚 사서</b><br><span class="muted">librarian</span></td><td>최신 문서·남의 예시 가져옴.</td><td class="soso">우리 파일 사정은 잘 모름.</td><td>낯선 도구 쓸 때</td></tr>
+      <tr data-cat="think"><td><b>🧠 박사님</b><br><span class="muted">oracle</span></td><td>어려운 문제 통찰. 안전(읽기만).</td><td class="soso">느리고 비쌈. 간단한 일에 부르면 낭비.</td><td>2번 실패·설계 고민 때</td></tr>
+      <tr data-cat="work"><td><b>📝 기록반장</b><br><span class="muted">general</span></td><td>잡일 묶어 처리·글쓰기 잘함.</td><td class="soso">전문 깊이는 각 선수만 못함.</td><td>정리·문서 만들 때</td></tr>
+    </table>
+    </div>
+    <div class="box"><strong>외우기 쉬운 공식:</strong> <span class="muted">“찾기 → 탐정, 배우기 → 사서, 짜기 → 설계사→공사반장, 막히면 → 박사님, 정리 → 기록반장”</span></div>
+    <div class="pager"><button type="button" data-prev data-goto="1">← 이전</button><span>3 / 5</span><button type="button" data-next data-goto="3">다음 →</button></div>
+  </section>
+
+  <!-- 4장 -->
+  <section class="panel" data-panel="3" aria-label="4장 골라쓰기 퀴즈">
+    <h2>4장. 상황별 골라쓰기 + 미니 퀴즈 3개</h2>
+    <div class="box"><strong>정답 루틴:</strong><p style="margin:6px 0 0">① “로그인 오류가 어디서 나지?” → 🔍 탐정 &nbsp; ② “처음 쓰는 결제 도구법?” → 📚 사서 &nbsp; ③ “회원 기능 통째로 만들기?” → 📐 설계사 → 🔨 공사반장 &nbsp; ④ “3번 고쳐도 안 돼!” → 🧠 박사님</p></div>
+    <div class="quiz" id="quiz">
+      <h3>Q1. “비밀번호 찾기 코드가 어디 있는지 모르겠어요.” 누구를?</h3>
+      <button type="button" data-ok="1">🔍 탐정 — 파일을 읽기만 하며 위치를 찾아달라고 한다</button>
+      <button type="button" data-ok="0">🔨 공사반장 — 일단 파일을 고쳐보라고 한다</button>
+      <p class="explain">정답: 탐정. 위치도 모르는데 고치면 위험! 찾기가 먼저입니다.</p>
+      <h3>Q2. “게시판+댓글+좋아요를 한 번에 만들고 싶어요.” 순서는?</h3>
+      <button type="button" data-ok="0">🔨 공사반장에게 바로 “다 만들어줘”</button>
+      <button type="button" data-ok="1">📐 설계사에게 계획 → 🔨 공사반장에게 나눠 시키기</button>
+      <p class="explain">정답: 설계 → 공사. 큰 공사는 도면 없이 시작하면 중간에 무너집니다.</p>
+      <h3>Q3. “같은 오류를 3번 고쳤는데 계속 나요.” 누구를?</h3>
+      <button type="button" data-ok="1">🧠 박사님 — 지금까지 한 일과 함께 상담한다</button>
+      <button type="button" data-ok="0">🔨 공사반장 — 같은 지시를 4번째로 반복한다</button>
+      <p class="explain">정답: 박사님. 3번 실패 = 방향이 틀렸다는 신호. 원인을 새로 봐야 합니다.</p>
+      <p><strong>점수: <span id="quizScore">0 / 3</span></strong> <span class="muted" id="quizMsg">버튼을 눌러보세요!</span></p>
+    </div>
+    <div class="pager"><button type="button" data-prev data-goto="2">← 이전</button><span>4 / 5</span><button type="button" data-next data-goto="4">다음 →</button></div>
+  </section>
+
+  <!-- 5장 -->
+  <section class="panel" data-panel="4" aria-label="5장 해보기">
+    <h2>5장. 내 손으로 해보기 (5분) + 인쇄</h2>
+    <p>아래 순서대로 해보고 체크하세요. 다 하면 이 메뉴얼 졸업!</p>
+    <ul class="check-list" id="checkList">
+      <li><label><input type="checkbox"> <span><b>Tab 3번 눌러 이름 바뀌는지 확인</b><br><span class="muted">입력창 옆 build / plan / explore 표시 확인</span></span></label></li>
+      <li><label><input type="checkbox"> <span><b>🔍 탐정에게 질문 1개</b><br><span class="muted">예: “로그인 관련 파일이 어디 있어?” (읽기만 하니 안전)</span></span></label></li>
+      <li><label><input type="checkbox"> <span><b>📐 설계사에게 계획 1개 부탁</b><br><span class="muted">예: “○○ 기능 만드는 순서 3단계로 짜줘”</span></span></label></li>
+      <li><label><input type="checkbox"> <span><b>🔨 공사반장에게 작은 일 1개</b><br><span class="muted">예: “오타 1개만 고쳐줘” — 큰 일은 시키지 않기</span></span></label></li>
+      <li><label><input type="checkbox"> <span><b>친구에게 30초 설명하기</b><br><span class="muted">“탭은 모자, 탐정은 찾기, 반장은 고치기” 말할 수 있으면 통과</span></span></label></li>
+    </ul>
+    <p>달성률: <span id="checkRate">0%</span></p>
+    <div class="rate-bar"><div id="rateFill"></div></div>
+    <div class="box"><strong>⚠️ 안전 수칙 3개</strong><p style="margin:6px 0 0">1) 모르면 탐정부터 (읽기만 = 안전). 2) 큰 일은 설계 → 공사 순서. 3) 3번 실패하면 박사님 + 사람에게 묻기. 비밀키(.env 값)는 절대 채팅·화면에 붙이지 않기!</p></div>
+    <div class="toggle-row no-print"><button type="button" id="printBtn" class="print-btn" style="padding:10px 18px;border-radius:10px;cursor:pointer">🖨️ A4로 인쇄 / PDF 저장 (5장)</button></div>
+    <p class="muted">인쇄 팁: 여백 보통, 배경 그래픽 끄기. 표·퀴즈 정답까지 모두 인쇄됩니다.</p>
+    <div class="pager"><button type="button" data-prev data-goto="3">← 이전</button><span>5 / 5</span><button type="button" data-next disabled>다음 →</button></div>
+  </section>
+</main>
+
+<footer>중학생용 탭·에이전트 메뉴얼 · Tab = 역할 모자 · opencode 기준 · A4 인쇄 대응</footer>
+
+<script>
+(function(){
+  var panels=document.querySelectorAll('.panel');
+  var tabs=document.querySelectorAll('#tabNav button');
+  var bar=document.getElementById('progressBar');
+  var wrap=document.getElementById('progressWrap');
+  function go(n){
+    panels.forEach(function(p,i){p.classList.toggle('active',i===n)});
+    tabs.forEach(function(t,i){t.setAttribute('aria-selected',i===n?'true':'false')});
+    bar.style.width=((n+1)/panels.length*100)+'%';
+    wrap.setAttribute('aria-valuenow',n+1);
+    document.getElementById('main').scrollIntoView({block:'start'});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){go(+t.dataset.page)})});
+  document.querySelectorAll('[data-goto]').forEach(function(b){
+    b.addEventListener('click',function(){go(+b.dataset.goto)});
+  });
+  // 필터
+  var fbtns=document.querySelectorAll('#filterRow button');
+  fbtns.forEach(function(b){b.addEventListener('click',function(){
+    fbtns.forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    var f=b.dataset.filter;
+    document.querySelectorAll('#compareTable tr[data-cat]').forEach(function(r){
+      r.style.display=(f==='all'||r.dataset.cat===f)?'':'none';
+    });
+  })});
+  // 퀴즈
+  var score=0, done={};
+  var quiz=document.getElementById('quiz');
+  var btns=quiz.querySelectorAll('button[data-ok]');
+  var allExp=quiz.querySelectorAll('.explain');
+  btns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var ok=btn.dataset.ok==='1';
+      var idx=Array.prototype.indexOf.call(btns,btn);
+      var qNo=idx<2?0:(idx<4?1:2);
+      if(ok){btn.classList.add('correct');}else{btn.classList.add('wrong');}
+      allExp[qNo].style.display='block';
+      if(ok && !done[qNo]){done[qNo]=1;score++;}
+      document.getElementById('quizScore').textContent=score+' / 3';
+      document.getElementById('quizMsg').textContent=score===3?'🎉 완벽! 탭 마스터!':(score===0?'다시 읽고 재도전!':'좋아요, 계속!') ;
+    },{once:false});
+  });
+  // 체크리스트
+  var boxes=document.querySelectorAll('#checkList input');
+  function rate(){
+    var c=[...boxes].filter(function(b){return b.checked}).length;
+    var p=Math.round(c/boxes.length*100);
+    document.getElementById('checkRate').textContent=p+'% ('+c+'/'+boxes.length+')';
+    document.getElementById('rateFill').style.width=p+'%';
+  }
+  boxes.forEach(function(b){b.addEventListener('change',rate)});
+  document.getElementById('printBtn').addEventListener('click',function(){window.print()});
+})();
+</script>
+</body>
+</html>

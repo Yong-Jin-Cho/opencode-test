@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edge 즐겨찾기 정리 메뉴얼 — 415개 → 8폴더</title>
+<style>
+:root{--bg:#0f141a;--bg2:#171d26;--card:#1c232e;--line:#2e3745;--text:#e9eef5;--muted:#9aa7b8;--accent:#5ac8a8;--accent2:#6aa8ff;--amber:#e8b23e;--red:#ef8aa5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;line-height:1.75}
+header{position:sticky;top:0;z-index:10;background:#131820;border-bottom:1px solid var(--line);padding:18px 20px 0}
+header h1{margin:0 0 4px;font-size:1.25rem}
+header p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
+.progress-wrap{height:6px;background:#0a0d11;border-radius:99px;overflow:hidden;margin-bottom:12px}
+#progressBar{height:100%;width:20%;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .3s}
+nav.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px}
+nav.tabs button{flex:1 0 auto;min-width:120px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--text);cursor:pointer;font-size:.85rem}
+nav.tabs button[aria-selected="true"]{background:var(--accent);color:#0c1210;font-weight:700;border-color:var(--accent)}
+main{max-width:920px;margin:0 auto;padding:24px 20px 60px}
+.panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+.panel.active{display:block}
+.panel h2{margin-top:0;font-size:1.2rem}
+.panel h3{margin:22px 0 8px;font-size:1rem;color:var(--accent)}
+.box{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}
+.muted{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.stat b{font-size:1.5rem;color:var(--accent)}
+.stat span{display:block;color:var(--muted);font-size:.82rem;margin-top:4px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.85rem}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:#141a23;color:var(--accent)}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.filter-row button{padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:var(--bg2);color:var(--text);cursor:pointer;font-size:.82rem}
+.filter-row button.on{background:var(--accent);color:#0c1210;font-weight:700}
+.check-list{list-style:none;padding:0;margin:12px 0;display:grid;gap:10px}
+.check-list label{display:flex;gap:10px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer}
+.check-list input{width:18px;height:18px;margin-top:4px;accent-color:var(--accent)}
+#checkRate{font-weight:700;color:var(--accent)}
+.rate-bar{height:8px;background:#0a0d11;border-radius:99px;overflow:hidden;margin-top:8px}
+#rateFill{height:100%;width:0;background:var(--accent);transition:width .3s}
+.pager{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
+.pager button{padding:10px 18px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--text);cursor:pointer;font-size:.9rem}
+.pager button:disabled{opacity:.4;cursor:default}
+kbd{background:#0a0d11;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 8px;font-family:Consolas,monospace;font-size:.85em}
+code{font-family:Consolas,monospace;font-size:.85em;color:#a5d6ff}
+.folder{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--bg2)}
+.folder b{color:var(--accent2)}
+.danger{border-color:var(--red)}
+.print-btn{background:var(--accent)!important;color:#0c1210!important;font-weight:700;border-color:var(--accent)!important;padding:10px 18px;border-radius:10px;cursor:pointer}
+footer{max-width:920px;margin:0 auto;padding:0 20px 40px;color:var(--muted);font-size:.82rem}
+@media(max-width:800px){.grid2,.grid3{grid-template-columns:1fr}nav.tabs{flex-direction:column}nav.tabs button{width:100%;text-align:left}.panel{padding:18px}}
+@page{size:A4;margin:15mm}
+@media print{header{position:static}nav.tabs,.pager,.progress-wrap,.filter-row,.no-print{display:none!important}body{background:#fff;color:#111}main{max-width:none;padding:0}.panel{display:block!important;background:#fff;color:#111;border:none;border-bottom:2px solid #ddd;border-radius:0;padding:14px 0;page-break-inside:avoid}.box,.stat,.folder,.check-list label{background:#f5f5f5!important;color:#111;border-color:#ccc}.muted{color:#444}th{background:#eee!important;color:#111}footer{display:none}}
+</style>
+</head>
+<body>
+<header>
+<h1>⭐ Edge 즐겨찾기 정리 메뉴얼 — 415개 → 8폴더</h1>
+<p>같은 카테고리는 하나의 폴더로. 백업 → 중복제거 → 폴더통합 → 유지관리 순서입니다.</p>
+<div class="progress-wrap" role="progressbar" aria-label="진행률" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" id="progressWrap"><div id="progressBar"></div></div>
+<nav class="tabs" id="tabNav" aria-label="장 이동">
+<button type="button" data-page="0" aria-selected="true">1장. 진단 결과</button>
+<button type="button" data-page="1" aria-selected="false">2장. 8폴더 설계</button>
+<button type="button" data-page="2" aria-selected="false">3장. 삭제·통합 후보</button>
+<button type="button" data-page="3" aria-selected="false">4장. 정리 순서</button>
+<button type="button" data-page="4" aria-selected="false">5장. 유지 + 인쇄</button>
+</nav>
+</header>
+<main id="main">
+<section class="panel active" data-panel="0">
+<h2>1장. 내 즐겨찾기 건강검진 결과</h2>
+<div class="grid3">
+<div class="stat"><b>415</b><span>전체 즐겨찾기 수</span></div>
+<div class="stat"><b>41</b><span>폴더 수 (중복 포함)</span></div>
+<div class="stat"><b>269</b><span>http:// 구형 주소 (65%)</span></div>
+</div>
+<div class="grid3" style="margin-top:12px">
+<div class="stat"><b>41종</b><span>중복 URL 종류</span></div>
+<div class="stat"><b>23</b><span>이름 없는 항목</span></div>
+<div class="stat"><b>30</b><span>사내망·내부IP (12./192.168)</span></div>
+</div>
+<h3>핵심 문제 5가지</h3>
+<div class="box"><strong>① SETC 폴더가 통째로 2개</strong><p class="muted" style="margin:6px 0 0">같은 하위폴더(모터·회로·펌프·체결 등)까지 완전히 겹칩니다. 하나를 지워도 되는 상태입니다.</p></div>
+<div class="box"><strong>② 뿌리(북마크바)에 ~40개가 폴더 없이 방치</strong><p class="muted" style="margin:6px 0 0">네이버·구글·코레일·유튜브 등이 바깥에 흩어져 있습니다. 폴더에 넣는 것만으로 절반이 정리됩니다.</p></div>
+<div class="box"><strong>③ edu.sec.net 6번, TOEIC·OPIc·삼성교육 중복</strong><p class="muted" style="margin:6px 0 0">같은 교육 링크가 Edu 폴더 여러 곳에 복사돼 있습니다.</p></div>
+<div class="box"><strong>④ IE 시절 유물 + 사내 인트라넷 다수</strong><p class="muted" style="margin:6px 0 0">2000년대 쇼핑몰·은행 링크, <code>12.26.x.x</code> 사내 시스템은 퇴사·만료 후 접속 불가 가능성이 큽니다. 보관함으로隔離 권장.</p></div>
+<div class="box"><strong>⑤ YouTube 35개가 여기저기 분산</strong><p class="muted" style="margin:6px 0 0">스키·진공펌프·우주·전기 등 주제별로 흩어져 있습니다. 영상은 한 폴더 + 하위주제로 모으기가 좋습니다.</p></div>
+<div class="pager"><button disabled>← 이전</button><span>1 / 5</span><button data-goto="1">다음 →</button></div>
+</section>
+
+<section class="panel" data-panel="1">
+<h2>2장. 목표 구조 — 8폴더로 통일</h2>
+<p>원칙: <strong>같은 카테고리는 하나의 폴더</strong>. 번호를 앞에 붙이면 순서가 고정됩니다.</p>
+<div class="grid2">
+<div class="folder"><b>01_자주씀</b><p class="muted">매일 여는 10개 이내만. 북마크바에 표시. 네이버·유튜브·지메일·캘린더 등.</p></div>
+<div class="folder"><b>02_학습·교육</b><p class="muted">삼성교육·OPIc·TOEIC·파이썬·주기율표. 기존 01 Edu + 흩어진 교육 링크 통합.</p></div>
+<div class="folder"><b>03_업무·기술</b><p class="muted">SETC 2개 → 1개로 통합. 하위는 모터/회로/펌프/체결/화학 유지. 사내 시스템은 하위폴더 _사내_보관.</p></div>
+<div class="folder"><b>04_금융·쇼핑</b><p class="muted">뱅킹 + 쇼핑 통합. 기존 뱅킹·쇼핑·IE쇼핑 3곳 → 1곳. 하위: 금융 / 쇼핑 / 여행·예매.</p></div>
+<div class="folder"><b>05_취미·영상</b><p class="muted">스키·게임(D4/POE2)·그림(CLIP)·유튜브 35개 통합. 하위: 스키 / 게임 / 그림 / 보기나중에.</p></div>
+<div class="folder"><b>06_AI·도구</b><p class="muted">ChatGPT·Gemini·NotebookLM·Copilot·AI Studio·번역기. 새로 만드는 폴더.</p></div>
+<div class="folder"><b>07_읽을거리</b><p class="muted">블로그·뉴스·커뮤니티(루리·인벤·디시). 하위 없이 20개 이내 유지.</p></div>
+<div class="folder"><b>08_보관함</b><p class="muted">IE유물·사내망·빈제목·http 구형. 지우기 전 1개월 보관. 하위: _IE옛자료 / _사내_보관 / _확인필요.</p></div>
+</div>
+<div class="box"><strong>이동 예시:</strong> <span class="muted">뿌리의 코레일·메가박스 → 04_금융·쇼핑/여행·예매 / 뿌리의 ChatGPT·Gemini → 06_AI·도구 / 흩어진 유튜브 → 05_취미·영상/보기나중에</span></div>
+<div class="pager"><button data-goto="0">← 이전</button><span>2 / 5</span><button data-goto="2">다음 →</button></div>
+</section>
+
+<section class="panel" data-panel="2">
+<h2>3장. 삭제·통합 후보 (버튼으로 골라보기)</h2>
+<div class="filter-row no-print" id="filterRow">
+<button data-filter="all" class="on">전체</button>
+<button data-filter="dup">🔁 중복</button>
+<button data-filter="dead">☠️ 접속불가 의심</button>
+<button data-filter="name">❓ 이름없음·정리</button>
+</div>
+<table id="t">
+<tr><th>유형</th><th>대상</th><th>권장 조치</th></tr>
+<tr data-cat="dup"><td>🔁 중복폴더</td><td>SETC 폴더 2개 (하위까지 동일)</td><td>둘을 비교해 한 개 삭제. 북마크 관리자에서 폴더째 삭제.</td></tr>
+<tr data-cat="dup"><td>🔁 중복 6회</td><td>edu.sec.net (삼성교육 로그인)</td><td>02_학습·교육에 1개만 남기기.</td></tr>
+<tr data-cat="dup"><td>🔁 중복 2~3회</td><td>TOEIC·OPIc·global.edusamsung·npagoda·korail·naver·daum·auction·11st·danawa 등 41종</td><td>최신 https 1개만 남기고 삭제.</td></tr>
+<tr data-cat="dup"><td>🔁 중복 2회</td><td>YouTube 다운로더 savefrom · 4kdownload · bandaimall·cartok</td><td>하나로 통일 또는 둘 다 삭제 후 필요시 재추가.</td></tr>
+<tr data-cat="dead"><td>☠️ 사내망 30개</td><td><code>12.26/12.30/12.54/12.56 + 192.168.x.x</code> (EES·EQP·WP·YMS·리피터 설정 등)</td><td>08_보관함/_사내_보관으로 이동. 접속되면 03으로 복귀.</td></tr>
+<tr data-cat="dead"><td>☠️ 구형 http 269개</td><td>auction·11st·yes24·로또·은행 구주소 (http://)</td><td>접속 확인 → https로 교체, 실패하면 삭제.</td></tr>
+<tr data-cat="dead"><td>☠️ IE 유물</td><td>Links 50여개 + 2000년대 쇼핑/은행/게임 (gameizzang·fashionpia·brother 등)</td><td>08_보관함/_IE옛자료로 폴더째 이동.</td></tr>
+<tr data-cat="name"><td>❓ 이름 없음 23개</td><td>기타·Other·Synced의 빈 제목 (다나와·11번가·토렌트·도미노 등)</td><td>제목 자동부여 후 분류, 토렌트系는 삭제 권장.</td></tr>
+<tr data-cat="name"><td>❓ 분산 35개</td><td>youtube.com 35개</td><td>05_취미·영상 하위주제로 이동.</td></tr>
+<tr data-cat="name"><td>❓ 민감 항목</td><td>성인·도박系 일부 확인됨</td><td>별도 Edge 프로필(잠금)로 분리 또는 삭제 권장. 공용 PC라면 즉시 정리.</td></tr>
+</table>
+<div class="box danger"><strong>⚠️ 지우기 전 필수:</strong> <span class="muted">Edge 종료 → <code>%LocalAppData%\Microsoft\Edge\User Data\Default\Bookmarks</code> 파일 복사해두기. Bookmarks.bak도 함께 백업됩니다.</span></div>
+<div class="pager"><button data-goto="1">← 이전</button><span>3 / 5</span><button data-goto="3">다음 →</button></div>
+</section>
+
+<section class="panel" data-panel="3">
+<h2>4장. 정리 순서 — 20분 코스</h2>
+<p>Edge에서: <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd> (북마크 관리자) → 점 3개 → 내보내기로 백업 먼저!</p>
+<div class="box danger"><strong>⚠️ 동기화가 켜져 있으면 파일을 직접 고치지 마세요.</strong><p class="muted" style="margin:6px 0 0">파일을 직접 편집해도 클라우드에서 복원됩니다(확인됨). 반드시 아래처럼 <strong>Edge 화면에서 삭제</strong>해야 클라우드에도 반영됩니다.</p></div>
+<ul class="check-list" id="checkList">
+<li><label><input type="checkbox"><span><b>① 백업 (2분)</b><br><span class="muted">북마크 관리자 → 내보내기 HTML 저장 + Bookmarks 파일 복사</span></span></label></li>
+<li><label><input type="checkbox"><span><b>② 8폴더 만들기 (3분)</b><br><span class="muted">01_자주씀 ~ 08_보관함을 북마크바에 생성</span></span></label></li>
+<li><label><input type="checkbox"><span><b>③ SETC 중복 제거 (3분)</b><br><span class="muted">둘 중 항목 적은 쪽 폴더를 통째로 삭제</span></span></label></li>
+<li><label><input type="checkbox"><span><b>④ 뿌리 40개 옮기기 (5분)</b><br><span class="muted">드래그로 01~07에 배정, 애매하면 08_보관함</span></span></label></li>
+<li><label><input type="checkbox"><span><b>⑤ 중복·빈제목·사내망 처리 (5분)</b><br><span class="muted">검색창에 edu.sec.net / 12. / youtube 입력해 모아서 이동·삭제</span></span></label></li>
+<li><label><input type="checkbox"><span><b>⑥ IE 유물隔離 (2분)</b><br><span class="muted">IE에서 가져온 즐겨찾기 → 08_보관함/_IE옛자료로 이동</span></span></label></li>
+</ul>
+<p>달성률: <span id="checkRate">0%</span></p><div class="rate-bar"><div id="rateFill"></div></div>
+<div class="box"><strong>드래그 팁:</strong> <span class="muted">여러 개 선택은 <kbd>Shift</kbd>(연속) / <kbd>Ctrl</kbd>(낱개). 폴더에 드롭하면 이동, 우클릭 → 삭제는 되돌리기 불가이니 백업 필수.</span></div>
+<div class="pager"><button data-goto="2">← 이전</button><span>4 / 5</span><button data-goto="4">다음 →</button></div>
+</section>
+
+<section class="panel" data-panel="4">
+<h2>5장. 유지관리 3원칙 + 인쇄</h2>
+<div class="box"><strong>① 들어오면 바로 분류</strong><p class="muted" style="margin:6px 0 0">새 즐겨찾기는 저장 대화상자에서 폴더를 지정. “북마크바(뿌리)”에 그냥 저장 금지.</p></div>
+<div class="box"><strong>② 월 1회 5분 청소</strong><p class="muted" style="margin:6px 0 0">관리자 검색 → <code>http://</code> 입력해 https로 교체, 안 열리는 것은 삭제. 01_자주씀은 10개 유지.</p></div>
+<div class="box"><strong>③ 08_보관함 비우기</strong><p class="muted" style="margin:6px 0 0">1개월 안 쓴 것은 삭제. Edge 동기화(프로필 로그인)를 켜면 PC·모바일이 함께 정리됩니다.</p></div>
+<div class="no-print"><button id="printBtn" class="print-btn">🖨️ A4로 인쇄 / PDF 저장</button></div>
+<p class="muted">인쇄 팁: 여백 보통, 배경 그래픽 끄기. 1~5장이 모두 출력됩니다.</p>
+<div class="pager"><button data-goto="3">← 이전</button><span>5 / 5</span><button disabled>다음 →</button></div>
+</section>
+</main>
+<footer>Edge 즐겨찾기 정리 메뉴얼 · 415개 분석 기준 · 백업 후 정리 권장</footer>
+<script>
+(function(){
+var panels=document.querySelectorAll('.panel'),tabs=document.querySelectorAll('#tabNav button'),bar=document.getElementById('progressBar'),wrap=document.getElementById('progressWrap');
+function go(n){panels.forEach(function(p,i){p.classList.toggle('active',i===n)});tabs.forEach(function(t,i){t.setAttribute('aria-selected',i===n?'true':'false')});bar.style.width=((n+1)/panels.length*100)+'%';wrap.setAttribute('aria-valuenow',n+1);document.getElementById('main').scrollIntoView({block:'start'})}
+tabs.forEach(function(t){t.addEventListener('click',function(){go(+t.dataset.page)})});
+document.querySelectorAll('[data-goto]').forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.goto)})});
+var fb=document.querySelectorAll('#filterRow button');
+fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.classList.remove('on')});b.classList.add('on');var f=b.dataset.filter;document.querySelectorAll('#t tr[data-cat]').forEach(function(r){r.style.display=(f==='all'||r.dataset.cat===f)?'':'none'})})});
+var boxes=document.querySelectorAll('#checkList input');
+function rate(){var c=Array.prototype.filter.call(boxes,function(b){return b.checked}).length;var p=Math.round(c/boxes.length*100);document.getElementById('checkRate').textContent=p+'% ('+c+'/'+boxes.length+')';document.getElementById('rateFill').style.width=p+'%'}
+boxes.forEach(function(b){b.addEventListener('change',rate)});
+document.getElementById('printBtn').addEventListener('click',function(){window.print()});
+})();
+</script>
+</body>
+</html>

@@ -13,3 +13,7 @@ __pycache__/
 # unattended automation
 logs/
 state/
+
+# local-only artifacts (대용량·민감 가능)
+.playwright-mcp/
+backups/
